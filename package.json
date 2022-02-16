@@ -1,8 +1,8 @@
 {
-  "name": "@cloudxs/cdk-iot-lorawan",
+  "name": "@cloudxs/cdk-iot-wireless",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cloudxsgmbh/cdk-iot-lorawan.git"
+    "url": "https://github.com/cloudxsgmbh/cdk-iot-wireless.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -112,7 +112,7 @@
     }
   },
   "types": "lib/index.d.ts",
-  "stability": "stable",
+  "stability": "experimental",
   "jsii": {
     "outdir": "dist",
     "targets": {},

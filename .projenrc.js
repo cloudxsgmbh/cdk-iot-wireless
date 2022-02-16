@@ -1,14 +1,14 @@
 const { awscdk } = require('projen');
 const { NpmAccess } = require('projen/lib/javascript');
 const project = new awscdk.AwsCdkConstructLibrary({
-  packageName: '@cloudxs/cdk-iot-lorawan',
+  stability: 'experimental',
   author: 'cloudxs GmbH',
   authorAddress: 'https://www.cloudxs.ch',
   authorOrganization: true,
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
-  name: '@cloudxs/cdk-iot-lorawan',
-  repositoryUrl: 'https://github.com/cloudxsgmbh/cdk-iot-lorawan.git',
+  name: '@cloudxs/cdk-iot-wireless',
+  repositoryUrl: 'https://github.com/cloudxsgmbh/cdk-iot-wireless.git',
   npmAccess: NpmAccess.PUBLIC,
 
   // deps: [],                /* Runtime dependencies of this module. */
