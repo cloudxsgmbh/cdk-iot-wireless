@@ -1,10 +1,11 @@
 const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
-  author: 'Andy Brunner',
-  authorAddress: 'andy@cloudxs.ch',
+  author: 'cloudxs GmbH',
+  authorAddress: 'https://www.cloudxs.ch',
+  authorOrganization: true,
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
-  name: 'cdk-iot-lorawan',
+  name: '@cloudxs/cdk-iot-lorawan',
   repositoryUrl: 'https://github.com/cloudxsgmbh/cdk-iot-lorawan.git',
 
   // deps: [],                /* Runtime dependencies of this module. */
