@@ -21,4 +21,12 @@ new Gateway(this, 'gw', {
 
 ## Dragino LHT65 decoder
 
-The Dragino sensor transmits an encoded payload.
+The Dragino sensor transmits an encoded payload. To decode it we use a IoT topic that decodes the payload with a Lambda function and republishes it to another topic. You can use the returned `ruleName` as a destination for Iot Wireless Devices.
+
+```typescript
+const rule = new LHT65PayloadDecoderRule(this, "decoder", {});
+
+new CfnOutput(this, "ruleName", {
+  value: rule.ruleName,
+});
+```
