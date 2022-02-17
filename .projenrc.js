@@ -17,7 +17,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   bundledDeps: [
     'esbuild',
   ],
-  keywords: ['aws', 'cdk', 'cdkv2', 'iot', 'wireless', 'lorawan', 'lambda', 'gateway'],
+  keywords: ['aws', 'cdkv2', 'iot', 'wireless', 'lorawan', 'lambda', 'gateway'],
 
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
