@@ -19,6 +19,16 @@ new Gateway(this, 'gw', {
 });
 ```
 
+## IoT Wireless Devices
+
+### Destinations
+
+To allow IoT Destinations to publish to an IoT rule there is a IAM role required. This role allows all Destinations to publish to all Rules.
+
+```typescript
+const destRole = new DestinationIamRole(this, "destRole");
+```
+
 ## Dragino LHT65 decoder
 
 The Dragino sensor transmits an encoded payload. To decode it we use a IoT topic that decodes the payload with a Lambda function and republishes it to the provided topic by using the [Republish](https://docs.aws.amazon.com/iot/latest/developerguide/republish-rule-action.html) rule action. You can use the returned `ruleName` as a destination for Iot Wireless Devices.

@@ -2,6 +2,113 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
+### DestinationIamRole <a name="DestinationIamRole" id="@cloudxs/cdk-iot-wireless.DestinationIamRole"></a>
+
+Grants all Wireless Destinations to forward messages to IoT rules (aka MQTT topics).
+
+#### Initializers <a name="Initializers" id="@cloudxs/cdk-iot-wireless.DestinationIamRole.Initializer"></a>
+
+```typescript
+import { DestinationIamRole } from '@cloudxs/cdk-iot-wireless'
+
+new DestinationIamRole(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.DestinationIamRole.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.DestinationIamRole.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@cloudxs/cdk-iot-wireless.DestinationIamRole.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@cloudxs/cdk-iot-wireless.DestinationIamRole.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.DestinationIamRole.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@cloudxs/cdk-iot-wireless.DestinationIamRole.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.DestinationIamRole.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@cloudxs/cdk-iot-wireless.DestinationIamRole.isConstruct"></a>
+
+```typescript
+import { DestinationIamRole } from '@cloudxs/cdk-iot-wireless'
+
+DestinationIamRole.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@cloudxs/cdk-iot-wireless.DestinationIamRole.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.DestinationIamRole.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.DestinationIamRole.property.role">role</a></code> | <code>aws-cdk-lib.aws_iam.Role</code> | IAM Role object. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@cloudxs/cdk-iot-wireless.DestinationIamRole.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `role`<sup>Required</sup> <a name="role" id="@cloudxs/cdk-iot-wireless.DestinationIamRole.property.role"></a>
+
+```typescript
+public readonly role: Role;
+```
+
+- *Type:* aws-cdk-lib.aws_iam.Role
+
+IAM Role object.
+
+---
+
+
 ### Gateway <a name="Gateway" id="@cloudxs/cdk-iot-wireless.Gateway"></a>
 
 Creates an IoT Wireless Gateway.

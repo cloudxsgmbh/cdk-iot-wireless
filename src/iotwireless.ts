@@ -1,4 +1,5 @@
-import { Role, ManagedPolicy, ServicePrincipal } from 'aws-cdk-lib/aws-iam';
+import { Stack } from 'aws-cdk-lib';
+import { Role, ManagedPolicy, ServicePrincipal, PolicyDocument, PolicyStatement, Effect } from 'aws-cdk-lib/aws-iam';
 import { CfnWirelessGateway } from 'aws-cdk-lib/aws-iotwireless';
 import { Construct } from 'constructs';
 
@@ -21,6 +22,44 @@ export class GatewayCertManagerIamRole extends Construct {
       ],
     });
 
+  }
+}
+/**
+ * Grants all Wireless Destinations to forward messages to IoT rules (aka MQTT topics)
+ *
+ * @stability stable
+ */
+export class DestinationIamRole extends Construct {
+  /**
+   * IAM Role object
+   */
+  public readonly role: Role;
+
+  constructor(scope: Construct, id: string) {
+    super(scope, id);
+
+    const stack = Stack.of(this);
+
+    this.role = new Role(this, 'iotDestinationRole', {
+      assumedBy: new ServicePrincipal('iotwireless.amazonaws.com'),
+      description: 'Grants all Wireless Destinations to forward messages to IoT rules (aka MQTT topics)',
+      inlinePolicies: {
+        PublishToRule: new PolicyDocument({
+          statements: [
+            new PolicyStatement({
+              effect: Effect.ALLOW,
+              actions: ['iot:Publish'],
+              resources: [`arn:aws:iot:${stack.region}:${stack.account}:topic/$aws/rules/*`],
+            }),
+            new PolicyStatement({
+              effect: Effect.ALLOW,
+              actions: ['iot:DescribeEndpoint'],
+              resources: ['*'],
+            }),
+          ],
+        }),
+      },
+    });
   }
 }
 /**
