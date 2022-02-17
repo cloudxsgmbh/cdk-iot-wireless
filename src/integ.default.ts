@@ -1,7 +1,9 @@
 import * as cdk from 'aws-cdk-lib';
-import { IotWirelessGatewayRole } from './index';
+import { LHT65PayloadDecoderRule } from './dragino';
+import { GatewayCertManagerIamRole } from './index';
 
 const app = new cdk.App();
 const stack = new cdk.Stack(app, 'MyStack');
 
-new IotWirelessGatewayRole(stack, 'IotWirelessGatewayRole');
+new GatewayCertManagerIamRole(stack, 'GatewayIamRole');
+new LHT65PayloadDecoderRule(stack, 'rule', {});
