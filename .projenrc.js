@@ -9,6 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: '@cloudxs/cdk-iot-wireless',
   repositoryUrl: 'https://github.com/cloudxsgmbh/cdk-iot-wireless.git',
+  description: 'This package contains AWS CDK L2 constructs for IoT Wireless.',
   npmAccess: NpmAccess.PUBLIC,
   deps: [
     'aws-cdk-lib',
