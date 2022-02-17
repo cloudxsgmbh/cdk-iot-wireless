@@ -21,12 +21,17 @@ new Gateway(this, 'gw', {
 
 ## Dragino LHT65 decoder
 
-The Dragino sensor transmits an encoded payload. To decode it we use a IoT topic that decodes the payload with a Lambda function and republishes it to another topic. You can use the returned `ruleName` as a destination for Iot Wireless Devices.
+The Dragino sensor transmits an encoded payload. To decode it we use a IoT topic that decodes the payload with a Lambda function and republishes it to the provided topic by using the [Republish](https://docs.aws.amazon.com/iot/latest/developerguide/republish-rule-action.html) rule action. You can use the returned `ruleName` as a destination for Iot Wireless Devices.
 
 ```typescript
-const rule = new LHT65PayloadDecoderRule(this, "decoder", {});
+const rule = new LHT65PayloadDecoderRule(this, "decoder", {
+  republishTopic: "${topic()}",
+});
 
 new CfnOutput(this, "ruleName", {
   value: rule.ruleName,
 });
 ```
+
+- `republishTopic`  
+  The message will be republished to the provided topic. For permission reasons, the provided topic will be automatically prefixed by the value `public/`. (E.g. `mytopic` will end up being `public/mytopic`). [Substitution Templates](https://docs.aws.amazon.com/iot/latest/developerguide/iot-substitution-templates.html) are allowed.
