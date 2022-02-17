@@ -47,6 +47,10 @@ export class LHT65PayloadDecoderRule extends Construct {
       logRetention: RetentionDays.ONE_MONTH,
     });
 
+    /* grant the iot rule to invoke the lambda */
+    decoderLambda.grantInvoke(new ServicePrincipal('iot.amazonaws.com'));
+
+    /* create an IAM role that allows the IoT rule to republish to a topic */
     const iotTopicPublishRole = new Role(this, 'iotPublishToTopic', {
       assumedBy: new ServicePrincipal('iot.amazonaws.com'),
       description: 'grants IOT Wireless rule to republish to a topic',
@@ -68,7 +72,7 @@ export class LHT65PayloadDecoderRule extends Construct {
       },
     });
 
-    /* Rule to decode payload and republish */
+    /* IoT rule that acts as a topic. It takes the Dragino payload, decodes it with the help of the lambda and republishes to a topic */
     const rule = new CfnTopicRule(this, 'rule', {
       topicRulePayload: {
         description: 'Decodes the payload of an Dragino LHT65 and republishes it to another MQTT topic',
@@ -85,6 +89,7 @@ export class LHT65PayloadDecoderRule extends Construct {
       },
     });
 
+    /* get the name of the IoT rule and set it as a class property */
     this.ruleName = Fn.ref(rule.logicalId);
 
   }
