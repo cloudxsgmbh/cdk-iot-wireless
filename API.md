@@ -306,6 +306,102 @@ The tree node.
 ---
 
 
+### LHT65DownlinkPayloadLambda <a name="LHT65DownlinkPayloadLambda" id="@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda"></a>
+
+Creates a Lambda function that sends a payload to all available LoRaWAN devices.
+
+Currently it allows only adjusting the interval of the devices.
+
+#### Initializers <a name="Initializers" id="@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.Initializer"></a>
+
+```typescript
+import { LHT65DownlinkPayloadLambda } from '@cloudxs/cdk-iot-wireless'
+
+new LHT65DownlinkPayloadLambda(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.isConstruct"></a>
+
+```typescript
+import { LHT65DownlinkPayloadLambda } from '@cloudxs/cdk-iot-wireless'
+
+LHT65DownlinkPayloadLambda.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@cloudxs/cdk-iot-wireless.LHT65DownlinkPayloadLambda.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+
 ### LHT65PayloadDecoderRule <a name="LHT65PayloadDecoderRule" id="@cloudxs/cdk-iot-wireless.LHT65PayloadDecoderRule"></a>
 
 Creates an IoT Wireless Rule.
@@ -422,6 +518,133 @@ returns the IoT rule name, which can be used as a topic to send encoded sensor d
 ---
 
 
+### LHT65Profiles <a name="LHT65Profiles" id="@cloudxs/cdk-iot-wireless.LHT65Profiles"></a>
+
+Creates a device and a service profile for Dragino LHT65 Temperature Sensors.
+
+#### Initializers <a name="Initializers" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer"></a>
+
+```typescript
+import { LHT65Profiles } from '@cloudxs/cdk-iot-wireless'
+
+new LHT65Profiles(scope: Construct, id: string, props?: ILHT65ProfilesProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.props">props</a></code> | <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps">ILHT65ProfilesProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Optional</sup> <a name="props" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps">ILHT65ProfilesProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.isConstruct"></a>
+
+```typescript
+import { LHT65Profiles } from '@cloudxs/cdk-iot-wireless'
+
+LHT65Profiles.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.property.deviceProfile">deviceProfile</a></code> | <code>string</code> | Device profile for LHT65 sensors. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.property.serviceProfile">serviceProfile</a></code> | <code>string</code> | Service profile for LHT65 sensors. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `deviceProfile`<sup>Required</sup> <a name="deviceProfile" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.property.deviceProfile"></a>
+
+```typescript
+public readonly deviceProfile: string;
+```
+
+- *Type:* string
+
+Device profile for LHT65 sensors.
+
+---
+
+##### `serviceProfile`<sup>Required</sup> <a name="serviceProfile" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.property.serviceProfile"></a>
+
+```typescript
+public readonly serviceProfile: string;
+```
+
+- *Type:* string
+
+Service profile for LHT65 sensors.
+
+---
+
+
 
 
 ## Protocols <a name="Protocols" id="Protocols"></a>
@@ -507,6 +730,120 @@ public readonly republishTopic: string;
 Republish topic.
 
 The encoded message will be republished to this MQTT topic. For a correct permission granting, please make sure that the first level does not contain a Substitution Template.
+
+---
+
+### ILHT65ProfilesProps <a name="ILHT65ProfilesProps" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps"></a>
+
+- *Implemented By:* <a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps">ILHT65ProfilesProps</a>
+
+Properties for LHT65 Profiles.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.macVersion">macVersion</a></code> | <code>string</code> | MAC version. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.maxEirp">maxEirp</a></code> | <code>number</code> | MaxEIRP. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.regParamsRevision">regParamsRevision</a></code> | <code>string</code> | Regional parameters version. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.rfRegion">rfRegion</a></code> | <code>string</code> | The frequency band (RFRegion) value. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spAddGWMetaData">spAddGWMetaData</a></code> | <code>boolean</code> | Service profile - Add additional gateway metadata (RSSI, SNR, GW geoloc., etc.) to the packets sent by devices. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spProfileName">spProfileName</a></code> | <code>string</code> | Service profile name. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.supportsJoin">supportsJoin</a></code> | <code>boolean</code> | Supports Join. |
+
+---
+
+##### `macVersion`<sup>Optional</sup> <a name="macVersion" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.macVersion"></a>
+
+```typescript
+public readonly macVersion: string;
+```
+
+- *Type:* string
+- *Default:* '1.0.3'
+
+MAC version.
+
+---
+
+##### `maxEirp`<sup>Optional</sup> <a name="maxEirp" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.maxEirp"></a>
+
+```typescript
+public readonly maxEirp: number;
+```
+
+- *Type:* number
+- *Default:* 15
+
+MaxEIRP.
+
+---
+
+##### `regParamsRevision`<sup>Optional</sup> <a name="regParamsRevision" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.regParamsRevision"></a>
+
+```typescript
+public readonly regParamsRevision: string;
+```
+
+- *Type:* string
+- *Default:* 'RP002-1.0.1'
+
+Regional parameters version.
+
+---
+
+##### `rfRegion`<sup>Optional</sup> <a name="rfRegion" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.rfRegion"></a>
+
+```typescript
+public readonly rfRegion: string;
+```
+
+- *Type:* string
+- *Default:* 'EU868'
+
+The frequency band (RFRegion) value.
+
+---
+
+##### `spAddGWMetaData`<sup>Optional</sup> <a name="spAddGWMetaData" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spAddGWMetaData"></a>
+
+```typescript
+public readonly spAddGWMetaData: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Service profile - Add additional gateway metadata (RSSI, SNR, GW geoloc., etc.) to the packets sent by devices.
+
+---
+
+##### `spProfileName`<sup>Optional</sup> <a name="spProfileName" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spProfileName"></a>
+
+```typescript
+public readonly spProfileName: string;
+```
+
+- *Type:* string
+- *Default:* none
+
+Service profile name.
+
+---
+
+##### `supportsJoin`<sup>Optional</sup> <a name="supportsJoin" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.supportsJoin"></a>
+
+```typescript
+public readonly supportsJoin: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Supports Join.
+
+Choose to enter the values for Join support (OTAA) or not (ABP).
 
 ---
 

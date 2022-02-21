@@ -45,3 +45,31 @@ new CfnOutput(this, "ruleName", {
 
 - `republishTopic`  
   The message will be republished to the provided topic. For permission reasons, do not use [Substitution Templates](https://docs.aws.amazon.com/iot/latest/developerguide/iot-substitution-templates.html) on the first level. Otherwise permissions will not be set correctly.
+
+## Dragino LHT65 Profiles
+
+Creates a Device Profile and a Servie Profile for Dragino LHT65 sensors. All properties have a default value that fits with the current generation of sensors, but can be set individually if needed.
+
+```typescript
+const lht65profiles = new LHT65Profiles(this, "profiles", {
+  rfRegion: "US915",
+});
+```
+
+## Dragino LHT65 Downlink Payload Lambda
+
+Creates a Lambda function that lets you send a Downlink Payload to the sensors. Currently it's just possible to adjust the intervall of the trasmitted sensor data and it the Lambda function sets it on all available LoRaWAN devices.
+
+```typescript
+new LHT65DownlinkPayloadLambda(this, "dlpl");
+```
+
+The Lambda can be invoked with a event containing a JSON like this:
+
+```json
+{
+  "FPort": 2,
+  "IntervalInSeconds": "900",
+  "TransmitMode": 1
+}
+```
