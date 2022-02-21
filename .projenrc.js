@@ -24,6 +24,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
+
+
+/*   publishToPypi: {
+    distName: 'cdk-iot-wireless',
+    module: 'cdk-iot-wireless',
+  }, */
 });
 
 project.synth();

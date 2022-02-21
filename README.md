@@ -35,7 +35,7 @@ The Dragino sensor transmits an encoded payload. To decode it we use a IoT topic
 
 ```typescript
 const rule = new LHT65PayloadDecoderRule(this, "decoder", {
-  republishTopic: "${topic()}",
+  republishTopic: "republish/${topic()}",
 });
 
 new CfnOutput(this, "ruleName", {
@@ -44,4 +44,4 @@ new CfnOutput(this, "ruleName", {
 ```
 
 - `republishTopic`  
-  The message will be republished to the provided topic. For permission reasons, the provided topic will be automatically prefixed by the value `public/`. (E.g. `mytopic` will end up being `public/mytopic`). [Substitution Templates](https://docs.aws.amazon.com/iot/latest/developerguide/iot-substitution-templates.html) are allowed.
+  The message will be republished to the provided topic. For permission reasons, do not use [Substitution Templates](https://docs.aws.amazon.com/iot/latest/developerguide/iot-substitution-templates.html) on the first level. Otherwise permissions will not be set correctly.

@@ -502,11 +502,11 @@ public readonly republishTopic: string;
 ```
 
 - *Type:* string
-- *Default:* '${topic()}'
+- *Default:* 'republish/${topic()}'
 
 Republish topic.
 
-The encoded message will be republished to this MQTT topic prefixed by 'public/'
+The encoded message will be republished to this MQTT topic. For a correct permission granting, please make sure that the first level does not contain a Substitution Template.
 
 ---
 

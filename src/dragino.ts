@@ -15,9 +15,9 @@ export interface ILHT65PayloadDecoderRuleProps {
   /**
    * Republish topic
    *
-   * The encoded message will be republished to this MQTT topic prefixed by 'public/'
+   * The encoded message will be republished to this MQTT topic. For a correct permission granting, please make sure that the first level does not contain a Substitution Template.
    *
-   * @default '${topic()}'
+   * @default 'republish/${topic()}'
    */
   readonly republishTopic?: string;
 }
@@ -50,6 +50,10 @@ export class LHT65PayloadDecoderRule extends Construct {
     /* grant the iot rule to invoke the lambda */
     decoderLambda.grantInvoke(new ServicePrincipal('iot.amazonaws.com'));
 
+    /* set default topic if necessary */
+    const rpTopic = props.republishTopic ? props.republishTopic : 'republish/${topic()}';
+
+
     /* create an IAM role that allows the IoT rule to republish to a topic */
     const iotTopicPublishRole = new Role(this, 'iotPublishToTopic', {
       assumedBy: new ServicePrincipal('iot.amazonaws.com'),
@@ -62,8 +66,8 @@ export class LHT65PayloadDecoderRule extends Construct {
                 effect: Effect.ALLOW,
                 actions: ['iot:Publish'],
                 resources: [
-                  `arn:aws:iot:${stack.region}:${stack.account}:topic/public/*`,
-                  `arn:aws:iot:${stack.region}:${stack.account}:topic/downlink/*`,
+                  `arn:aws:iot:${stack.region}:${stack.account}:topic/${rpTopic.split('/')[0]}/*`,
+                  //`arn:aws:iot:${stack.region}:${stack.account}:topic/downlink/*`,
                 ],
               }),
             ],
@@ -81,7 +85,7 @@ export class LHT65PayloadDecoderRule extends Construct {
         actions: [
           {
             republish: {
-              topic: 'public/' + (props.republishTopic ? props.republishTopic : '${topic()}'),
+              topic: rpTopic,
               roleArn: iotTopicPublishRole.roleArn,
             },
           },

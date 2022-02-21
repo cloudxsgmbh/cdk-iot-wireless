@@ -1,5 +1,6 @@
 {
   "name": "@cloudxs/cdk-iot-wireless",
+  "description": "This package contains AWS CDK L2 constructs for IoT Wireless.",
   "repository": {
     "type": "git",
     "url": "https://github.com/cloudxsgmbh/cdk-iot-wireless.git"
@@ -48,7 +49,7 @@
     "jest-junit": "^13",
     "jsii": "^1.54.0",
     "jsii-diff": "^1.54.0",
-    "jsii-docgen": "^6.1.6",
+    "jsii-docgen": "^6.1.10",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "projen": "^0.52.31",
@@ -61,9 +62,9 @@
     "constructs": "^10.0.5"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.12.0",
-    "constructs": "^10.0.64",
-    "esbuild": "^0.14.22"
+    "aws-cdk-lib": "^2.13.0",
+    "constructs": "^10.0.68",
+    "esbuild": "^0.14.23"
   },
   "bundledDependencies": [
     "esbuild"
