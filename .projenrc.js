@@ -1,21 +1,22 @@
 const { awscdk } = require('projen');
 const { NpmAccess } = require('projen/lib/javascript');
 const project = new awscdk.AwsCdkConstructLibrary({
-  stability: 'experimental',
+  stability: 'stable',
   author: 'cloudxs GmbH',
   authorAddress: 'https://www.cloudxs.ch',
   authorOrganization: true,
+  majorVersion: 1,
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
   name: '@cloudxs/cdk-iot-wireless',
   repositoryUrl: 'https://github.com/cloudxsgmbh/cdk-iot-wireless.git',
   description: 'This package contains AWS CDK L2 constructs for IoT Wireless.',
   npmAccess: NpmAccess.PUBLIC,
-  /*   deps: [
+  /* deps: [
     'aws-cdk-lib',
     'constructs',
   ], */
-  /*   bundledDeps: [
+  /* bundledDeps: [
     'esbuild',
   ], */
   keywords: ['aws', 'cdk', 'cdkv2', 'iot', 'wireless', 'lorawan', 'lambda', 'gateway'],

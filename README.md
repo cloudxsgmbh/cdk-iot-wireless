@@ -48,7 +48,7 @@ new CfnOutput(this, "ruleName", {
 
 ## Dragino LHT65 Profiles
 
-Creates a Device Profile and a Servie Profile for Dragino LHT65 sensors. All properties have a default value that fits with the current generation of sensors, but can be set individually if needed.
+Creates a Device Profile and a Service Profile for Dragino LHT65 sensors. All properties have a default value that fits with the current generation of sensors, but can be set individually if needed.
 
 ```typescript
 const lht65profiles = new LHT65Profiles(this, "profiles", {

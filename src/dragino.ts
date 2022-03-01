@@ -201,11 +201,11 @@ export interface ILHT65ProfilesProps {
 export class LHT65Profiles extends Construct {
 
   /**
-   * Device profile for LHT65 sensors
+   * Device profile ID for LHT65 sensors
    */
   public readonly deviceProfile: string;
   /**
-   * Service profile for LHT65 sensors
+   * Service profile ID for LHT65 sensors
    */
   public readonly serviceProfile: string;
 

@@ -603,8 +603,8 @@ Any object.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.property.deviceProfile">deviceProfile</a></code> | <code>string</code> | Device profile for LHT65 sensors. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.property.serviceProfile">serviceProfile</a></code> | <code>string</code> | Service profile for LHT65 sensors. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.property.deviceProfile">deviceProfile</a></code> | <code>string</code> | Device profile ID for LHT65 sensors. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.property.serviceProfile">serviceProfile</a></code> | <code>string</code> | Service profile ID for LHT65 sensors. |
 
 ---
 
@@ -628,7 +628,7 @@ public readonly deviceProfile: string;
 
 - *Type:* string
 
-Device profile for LHT65 sensors.
+Device profile ID for LHT65 sensors.
 
 ---
 
@@ -640,7 +640,7 @@ public readonly serviceProfile: string;
 
 - *Type:* string
 
-Service profile for LHT65 sensors.
+Service profile ID for LHT65 sensors.
 
 ---
 
