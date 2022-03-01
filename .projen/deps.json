@@ -94,10 +94,6 @@
       "type": "build"
     },
     {
-      "name": "esbuild",
-      "type": "bundled"
-    },
-    {
       "name": "aws-cdk-lib",
       "version": "^2.1.0",
       "type": "peer"
