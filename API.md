@@ -744,6 +744,7 @@ Properties for LHT65 Profiles.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.dpProfileName">dpProfileName</a></code> | <code>string</code> | The name of the device profile. |
 | <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.macVersion">macVersion</a></code> | <code>string</code> | MAC version. |
 | <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.maxEirp">maxEirp</a></code> | <code>number</code> | MaxEIRP. |
 | <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.regParamsRevision">regParamsRevision</a></code> | <code>string</code> | Regional parameters version. |
@@ -751,6 +752,19 @@ Properties for LHT65 Profiles.
 | <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spAddGWMetaData">spAddGWMetaData</a></code> | <code>boolean</code> | Service profile - Add additional gateway metadata (RSSI, SNR, GW geoloc., etc.) to the packets sent by devices. |
 | <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spProfileName">spProfileName</a></code> | <code>string</code> | Service profile name. |
 | <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.supportsJoin">supportsJoin</a></code> | <code>boolean</code> | Supports Join. |
+
+---
+
+##### `dpProfileName`<sup>Optional</sup> <a name="dpProfileName" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.dpProfileName"></a>
+
+```typescript
+public readonly dpProfileName: string;
+```
+
+- *Type:* string
+- *Default:* 'Dragino LHT65 Temperature Sensor'
+
+The name of the device profile.
 
 ---
 
