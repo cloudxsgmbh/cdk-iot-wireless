@@ -27,10 +27,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // packageName: undefined,  /* The "name" in package.json. */
 
 
-/*   publishToPypi: {
-    distName: 'cdk-iot-wireless',
-    module: 'cdk-iot-wireless',
-  }, */
+  /*   publishToPypi: {
+      distName: 'cdk-iot-wireless',
+      module: 'cdk-iot-wireless',
+    }, */
 });
 
 project.synth();
