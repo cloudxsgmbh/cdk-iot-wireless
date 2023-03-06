@@ -155,6 +155,12 @@ export class LHT65DownlinkPayloadLambda extends Construct {
  */
 export interface ILHT65ProfilesProps {
   /**
+   * The name of the device profile.
+   *
+   * @default 'Dragino LHT65 Temperature Sensor'
+   */
+  readonly dpProfileName?: string;
+  /**
    * The frequency band (RFRegion) value.
    *
    * @default 'EU868'
@@ -216,6 +222,7 @@ export class LHT65Profiles extends Construct {
 
     /* set default options */
     const defaultOptions: ILHT65ProfilesProps = {
+      dpProfileName: 'Dragino LHT65 Temperature Sensor',
       rfRegion: 'EU868',
       macVersion: '1.0.3',
       regParamsRevision: 'RP002-1.0.1',
@@ -228,7 +235,7 @@ export class LHT65Profiles extends Construct {
 
     /* Device Profile for sensors - https://wiki.dragino.com/index.php?title=Notes_for_AWS-IoT-Core#CREATE_DEVICE_PROFILE*/
     const dp = new CfnDeviceProfile(this, 'devProfile', {
-      name: 'Dragino LHT65 Temperature Sensor',
+      name: this.options.dpProfileName,
       loRaWan: {
         rfRegion: this.options.rfRegion,
         macVersion: this.options.macVersion,
