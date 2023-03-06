@@ -73,3 +73,13 @@ The Lambda can be invoked with a event containing a JSON like this:
   "TransmitMode": 1
 }
 ```
+
+# Development
+## How to apply changes
+- Make sure you have the latest commits locally pulled (Github actions create new commits on the server).
+- make your changes
+  - If there are only commits with _fix:_ prefix, projen bumps only the _PATCH_ version.
+  - If there is at least one commit with _feat:_ prefix, projen bumps the _MINOR_ version
+- run the command `yarn build` locally
+- commit the latest changes
+- `git push` your changes
