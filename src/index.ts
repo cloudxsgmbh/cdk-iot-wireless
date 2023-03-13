@@ -1,2 +1,2 @@
 export * from './iotwireless';
-export * from './dragino';
+export * from './draginoLHT65';
