@@ -7,6 +7,7 @@ import { Function, Code, Runtime } from 'aws-cdk-lib/aws-lambda';
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { RetentionDays } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
+import { IAWSIotProfiles } from './awsIotProfiles';
 
 /**
  * Properties for a PayloadDecoderTopic.
@@ -148,59 +149,7 @@ export class LHT65DownlinkPayloadLambda extends Construct {
 
   }
 }
-/**
- * Properties for LHT65 Profiles.
- *
- * @stability stable
- */
-export interface ILHT65ProfilesProps {
-  /**
-   * The name of the device profile.
-   *
-   * @default 'Dragino LHT65 Temperature Sensor'
-   */
-  readonly dpProfileName?: string;
-  /**
-   * The frequency band (RFRegion) value.
-   *
-   * @default 'EU868'
-   * @stability stable
-   */
-  readonly rfRegion?: 'AU915'|'EU868'|'US915'|'AS923-1';
-  /**
-   * MAC version
-   * @default '1.0.3'
-   */
-  readonly macVersion?: '1.0.2'|'1.0.3'|'1.1';
-  /**
-   * Regional parameters version
-   * @default 'RP002-1.0.1'
-   */
-  readonly regParamsRevision?: 'LoRaWAN v1.0.1'|'Regional Parameters v1.0.2rB'|'Regional Parameters v1.0.3rA'|'Regional Parameters v1.1rA'|'RP002-1.0.0'|'RP002-1.0.1';
-  /**
-   * MaxEIRP
-   * @default 15
-   */
-  readonly maxEirp?: number;
-  /**
-   * Supports Join
-   *
-   * Choose to enter the values for Join support (OTAA) or not (ABP).
-   *
-   * @default true
-   */
-  readonly supportsJoin?: boolean;
-  /**
-   * Service profile name
-   * @default none
-   */
-  readonly spProfileName?: string;
-  /**
-   * Service profile - Add additional gateway metadata (RSSI, SNR, GW geoloc., etc.) to the packets sent by devices.
-   * @default true
-   */
-  readonly spAddGWMetaData?: boolean;
-}
+
 /**
  * Creates a device and a service profile for Dragino LHT65 Temperature Sensors
  */
@@ -215,20 +164,20 @@ export class LHT65Profiles extends Construct {
    */
   public readonly serviceProfile: string;
 
-  private options: ILHT65ProfilesProps;
+  private options: IAWSIotProfiles;
 
-  constructor(scope: Construct, id: string, props?: ILHT65ProfilesProps) {
+  constructor(scope: Construct, id: string, props?: IAWSIotProfiles) {
     super(scope, id);
 
     /* set default options */
-    const defaultOptions: ILHT65ProfilesProps = {
+    const defaultOptions: IAWSIotProfiles = {
       dpProfileName: 'Dragino LHT65 Temperature Sensor',
       rfRegion: 'EU868',
       macVersion: '1.0.3',
       regParamsRevision: 'RP002-1.0.1',
       maxEirp: 15,
       supportsJoin: true,
-      spProfileName: '',
+      spProfileName: 'Dragino LHT65 Temperature Sensor',
       spAddGWMetaData: true,
     };
     this.options = { ...defaultOptions, ...props };

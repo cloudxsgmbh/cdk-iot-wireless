@@ -527,14 +527,14 @@ Creates a device and a service profile for Dragino LHT65 Temperature Sensors.
 ```typescript
 import { LHT65Profiles } from '@cloudxs/cdk-iot-wireless'
 
-new LHT65Profiles(scope: Construct, id: string, props?: ILHT65ProfilesProps)
+new LHT65Profiles(scope: Construct, id: string, props?: IAWSIotProfiles)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
 | <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.props">props</a></code> | <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps">ILHT65ProfilesProps</a></code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.props">props</a></code> | <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles">IAWSIotProfiles</a></code> | *No description.* |
 
 ---
 
@@ -552,7 +552,7 @@ new LHT65Profiles(scope: Construct, id: string, props?: ILHT65ProfilesProps)
 
 ##### `props`<sup>Optional</sup> <a name="props" id="@cloudxs/cdk-iot-wireless.LHT65Profiles.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps">ILHT65ProfilesProps</a>
+- *Type:* <a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles">IAWSIotProfiles</a>
 
 ---
 
@@ -645,9 +645,379 @@ Service profile ID for LHT65 sensors.
 ---
 
 
+### MiromicoInsightPayloadDecoderRule <a name="MiromicoInsightPayloadDecoderRule" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule"></a>
+
+Creates an IoT Wireless Rule.
+
+It decodes the encoded Payload from Dragino Sensors and republishes it to a topic.
+
+#### Initializers <a name="Initializers" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.Initializer"></a>
+
+```typescript
+import { MiromicoInsightPayloadDecoderRule } from '@cloudxs/cdk-iot-wireless'
+
+new MiromicoInsightPayloadDecoderRule(scope: Construct, id: string, props: IMiromicoInsightPayloadDecoderRuleProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.Initializer.parameter.props">props</a></code> | <code><a href="#@cloudxs/cdk-iot-wireless.IMiromicoInsightPayloadDecoderRuleProps">IMiromicoInsightPayloadDecoderRuleProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Required</sup> <a name="props" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@cloudxs/cdk-iot-wireless.IMiromicoInsightPayloadDecoderRuleProps">IMiromicoInsightPayloadDecoderRuleProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.isConstruct"></a>
+
+```typescript
+import { MiromicoInsightPayloadDecoderRule } from '@cloudxs/cdk-iot-wireless'
+
+MiromicoInsightPayloadDecoderRule.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.property.ruleName">ruleName</a></code> | <code>string</code> | returns the IoT rule name, which can be used as a topic to send encoded sensor data to. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `ruleName`<sup>Required</sup> <a name="ruleName" id="@cloudxs/cdk-iot-wireless.MiromicoInsightPayloadDecoderRule.property.ruleName"></a>
+
+```typescript
+public readonly ruleName: string;
+```
+
+- *Type:* string
+
+returns the IoT rule name, which can be used as a topic to send encoded sensor data to.
+
+---
+
+
+### MiromicoInsightProfiles <a name="MiromicoInsightProfiles" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles"></a>
+
+Creates a device and a service profile for Miromico Insight Sensors.
+
+#### Initializers <a name="Initializers" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.Initializer"></a>
+
+```typescript
+import { MiromicoInsightProfiles } from '@cloudxs/cdk-iot-wireless'
+
+new MiromicoInsightProfiles(scope: Construct, id: string, props?: IAWSIotProfiles)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.Initializer.parameter.props">props</a></code> | <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles">IAWSIotProfiles</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Optional</sup> <a name="props" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles">IAWSIotProfiles</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.isConstruct"></a>
+
+```typescript
+import { MiromicoInsightProfiles } from '@cloudxs/cdk-iot-wireless'
+
+MiromicoInsightProfiles.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.property.deviceProfile">deviceProfile</a></code> | <code>string</code> | Device profile ID for MiromicoInsight. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.property.serviceProfile">serviceProfile</a></code> | <code>string</code> | Service profile ID for MiromicoInsight. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `deviceProfile`<sup>Required</sup> <a name="deviceProfile" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.property.deviceProfile"></a>
+
+```typescript
+public readonly deviceProfile: string;
+```
+
+- *Type:* string
+
+Device profile ID for MiromicoInsight.
+
+---
+
+##### `serviceProfile`<sup>Required</sup> <a name="serviceProfile" id="@cloudxs/cdk-iot-wireless.MiromicoInsightProfiles.property.serviceProfile"></a>
+
+```typescript
+public readonly serviceProfile: string;
+```
+
+- *Type:* string
+
+Service profile ID for MiromicoInsight.
+
+---
+
+
 
 
 ## Protocols <a name="Protocols" id="Protocols"></a>
+
+### IAWSIotProfiles <a name="IAWSIotProfiles" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles"></a>
+
+- *Implemented By:* <a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles">IAWSIotProfiles</a>
+
+Properties for AWS Iot Profiles.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.dpProfileName">dpProfileName</a></code> | <code>string</code> | The name of the device profile. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.macVersion">macVersion</a></code> | <code>string</code> | MAC version. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.maxEirp">maxEirp</a></code> | <code>number</code> | MaxEIRP. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.regParamsRevision">regParamsRevision</a></code> | <code>string</code> | Regional parameters version. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.rfRegion">rfRegion</a></code> | <code>string</code> | The frequency band (RFRegion) value. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.spAddGWMetaData">spAddGWMetaData</a></code> | <code>boolean</code> | Service profile - Add additional gateway metadata (RSSI, SNR, GW geoloc., etc.) to the packets sent by devices. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.spProfileName">spProfileName</a></code> | <code>string</code> | Service profile name. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.supportsJoin">supportsJoin</a></code> | <code>boolean</code> | Supports Join. |
+
+---
+
+##### `dpProfileName`<sup>Optional</sup> <a name="dpProfileName" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.dpProfileName"></a>
+
+```typescript
+public readonly dpProfileName: string;
+```
+
+- *Type:* string
+
+The name of the device profile.
+
+---
+
+##### `macVersion`<sup>Optional</sup> <a name="macVersion" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.macVersion"></a>
+
+```typescript
+public readonly macVersion: string;
+```
+
+- *Type:* string
+- *Default:* '1.0.3'
+
+MAC version.
+
+---
+
+##### `maxEirp`<sup>Optional</sup> <a name="maxEirp" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.maxEirp"></a>
+
+```typescript
+public readonly maxEirp: number;
+```
+
+- *Type:* number
+- *Default:* 15
+
+MaxEIRP.
+
+---
+
+##### `regParamsRevision`<sup>Optional</sup> <a name="regParamsRevision" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.regParamsRevision"></a>
+
+```typescript
+public readonly regParamsRevision: string;
+```
+
+- *Type:* string
+- *Default:* 'RP002-1.0.1'
+
+Regional parameters version.
+
+---
+
+##### `rfRegion`<sup>Optional</sup> <a name="rfRegion" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.rfRegion"></a>
+
+```typescript
+public readonly rfRegion: string;
+```
+
+- *Type:* string
+- *Default:* 'EU868'
+
+The frequency band (RFRegion) value.
+
+---
+
+##### `spAddGWMetaData`<sup>Optional</sup> <a name="spAddGWMetaData" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.spAddGWMetaData"></a>
+
+```typescript
+public readonly spAddGWMetaData: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Service profile - Add additional gateway metadata (RSSI, SNR, GW geoloc., etc.) to the packets sent by devices.
+
+---
+
+##### `spProfileName`<sup>Optional</sup> <a name="spProfileName" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.spProfileName"></a>
+
+```typescript
+public readonly spProfileName: string;
+```
+
+- *Type:* string
+- *Default:* none
+
+Service profile name.
+
+---
+
+##### `supportsJoin`<sup>Optional</sup> <a name="supportsJoin" id="@cloudxs/cdk-iot-wireless.IAWSIotProfiles.property.supportsJoin"></a>
+
+```typescript
+public readonly supportsJoin: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Supports Join.
+
+Choose to enter the values for Join support (OTAA) or not (ABP).
+
+---
 
 ### IGatewayProps <a name="IGatewayProps" id="@cloudxs/cdk-iot-wireless.IGatewayProps"></a>
 
@@ -733,131 +1103,33 @@ The encoded message will be republished to this MQTT topic. For a correct permis
 
 ---
 
-### ILHT65ProfilesProps <a name="ILHT65ProfilesProps" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps"></a>
+### IMiromicoInsightPayloadDecoderRuleProps <a name="IMiromicoInsightPayloadDecoderRuleProps" id="@cloudxs/cdk-iot-wireless.IMiromicoInsightPayloadDecoderRuleProps"></a>
 
-- *Implemented By:* <a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps">ILHT65ProfilesProps</a>
+- *Implemented By:* <a href="#@cloudxs/cdk-iot-wireless.IMiromicoInsightPayloadDecoderRuleProps">IMiromicoInsightPayloadDecoderRuleProps</a>
 
-Properties for LHT65 Profiles.
+Properties for a PayloadDecoderTopic.
 
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.dpProfileName">dpProfileName</a></code> | <code>string</code> | The name of the device profile. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.macVersion">macVersion</a></code> | <code>string</code> | MAC version. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.maxEirp">maxEirp</a></code> | <code>number</code> | MaxEIRP. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.regParamsRevision">regParamsRevision</a></code> | <code>string</code> | Regional parameters version. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.rfRegion">rfRegion</a></code> | <code>string</code> | The frequency band (RFRegion) value. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spAddGWMetaData">spAddGWMetaData</a></code> | <code>boolean</code> | Service profile - Add additional gateway metadata (RSSI, SNR, GW geoloc., etc.) to the packets sent by devices. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spProfileName">spProfileName</a></code> | <code>string</code> | Service profile name. |
-| <code><a href="#@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.supportsJoin">supportsJoin</a></code> | <code>boolean</code> | Supports Join. |
+| <code><a href="#@cloudxs/cdk-iot-wireless.IMiromicoInsightPayloadDecoderRuleProps.property.republishTopic">republishTopic</a></code> | <code>string</code> | Republish topic. |
 
 ---
 
-##### `dpProfileName`<sup>Optional</sup> <a name="dpProfileName" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.dpProfileName"></a>
+##### `republishTopic`<sup>Optional</sup> <a name="republishTopic" id="@cloudxs/cdk-iot-wireless.IMiromicoInsightPayloadDecoderRuleProps.property.republishTopic"></a>
 
 ```typescript
-public readonly dpProfileName: string;
+public readonly republishTopic: string;
 ```
 
 - *Type:* string
-- *Default:* 'Dragino LHT65 Temperature Sensor'
+- *Default:* 'republish/${topic()}'
 
-The name of the device profile.
+Republish topic.
 
----
-
-##### `macVersion`<sup>Optional</sup> <a name="macVersion" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.macVersion"></a>
-
-```typescript
-public readonly macVersion: string;
-```
-
-- *Type:* string
-- *Default:* '1.0.3'
-
-MAC version.
-
----
-
-##### `maxEirp`<sup>Optional</sup> <a name="maxEirp" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.maxEirp"></a>
-
-```typescript
-public readonly maxEirp: number;
-```
-
-- *Type:* number
-- *Default:* 15
-
-MaxEIRP.
-
----
-
-##### `regParamsRevision`<sup>Optional</sup> <a name="regParamsRevision" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.regParamsRevision"></a>
-
-```typescript
-public readonly regParamsRevision: string;
-```
-
-- *Type:* string
-- *Default:* 'RP002-1.0.1'
-
-Regional parameters version.
-
----
-
-##### `rfRegion`<sup>Optional</sup> <a name="rfRegion" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.rfRegion"></a>
-
-```typescript
-public readonly rfRegion: string;
-```
-
-- *Type:* string
-- *Default:* 'EU868'
-
-The frequency band (RFRegion) value.
-
----
-
-##### `spAddGWMetaData`<sup>Optional</sup> <a name="spAddGWMetaData" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spAddGWMetaData"></a>
-
-```typescript
-public readonly spAddGWMetaData: boolean;
-```
-
-- *Type:* boolean
-- *Default:* true
-
-Service profile - Add additional gateway metadata (RSSI, SNR, GW geoloc., etc.) to the packets sent by devices.
-
----
-
-##### `spProfileName`<sup>Optional</sup> <a name="spProfileName" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.spProfileName"></a>
-
-```typescript
-public readonly spProfileName: string;
-```
-
-- *Type:* string
-- *Default:* none
-
-Service profile name.
-
----
-
-##### `supportsJoin`<sup>Optional</sup> <a name="supportsJoin" id="@cloudxs/cdk-iot-wireless.ILHT65ProfilesProps.property.supportsJoin"></a>
-
-```typescript
-public readonly supportsJoin: boolean;
-```
-
-- *Type:* boolean
-- *Default:* true
-
-Supports Join.
-
-Choose to enter the values for Join support (OTAA) or not (ABP).
+The encoded message will be republished to this MQTT topic. For a correct permission granting, please make sure that the first level does not contain a Substitution Template.
 
 ---
 

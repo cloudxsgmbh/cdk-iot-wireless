@@ -1,0 +1,17 @@
+{
+  "codecId": "3eeb",
+  "sourceUrl": "https://docs.miromico.ch/miro-insight/index.html",
+  "vendorId": "0110",
+  "mac": "10CE45",
+  "version": "1.0.0",
+  "main": "index.js",
+  "specVersion": "1.0.0",
+  "name": "miro-insight-codec",
+  "description": "The LoRaWAN codec for the Miromico miro Insight",
+  "codec": {
+    "encodeDownlink": true,
+    "decodeDownlink": true,
+    "examples": true,
+    "jsonSchemas": false
+  }
+}
