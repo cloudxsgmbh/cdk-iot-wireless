@@ -1,5 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
-import { LHT65PayloadDecoderRule } from './dragino';
+import { LHT65PayloadDecoderRule } from './draginoLHT65';
 import { GatewayCertManagerIamRole } from './index';
 
 const app = new cdk.App();
